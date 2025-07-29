@@ -1,0 +1,82 @@
+# Git LFS Configuration for Runako Pictures Photography Portfolio
+
+# ===== IMAGE FILES - All photography content =====
+# JPEG/JPG files (most photography files)
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.JPG filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.JPEG filter=lfs diff=lfs merge=lfs -text
+
+# PNG files (logos, graphics, some photos)
+*.png filter=lfs diff=lfs merge=lfs -text
+*.PNG filter=lfs diff=lfs merge=lfs -text
+
+# WebP files (modern web format)
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.WEBP filter=lfs diff=lfs merge=lfs -text
+
+# AVIF files (next-gen format)
+*.avif filter=lfs diff=lfs merge=lfs -text
+*.AVIF filter=lfs diff=lfs merge=lfs -text
+
+# ===== SPECIFIC DIRECTORIES - Photography collections =====
+# Japan Trip photos
+public/pics/japan\ trip/** filter=lfs diff=lfs merge=lfs -text
+public/pics/japan\ trip/japan\ trip\ watermark/** filter=lfs diff=lfs merge=lfs -text
+
+# Kota Lama photos
+public/pics/kota\ lama/** filter=lfs diff=lfs merge=lfs -text
+public/pics/kota\ lama/kotlam/** filter=lfs diff=lfs merge=lfs -text
+
+# School Life photos
+public/pics/school\ life/** filter=lfs diff=lfs merge=lfs -text
+public/pics/school\ life/new\ pics/** filter=lfs diff=lfs merge=lfs -text
+
+# Studiocology photos
+public/pics/studiocology/** filter=lfs diff=lfs merge=lfs -text
+public/pics/studiocology/studiocology\ pics/** filter=lfs diff=lfs merge=lfs -text
+
+# Profile and logo images
+public/pics/profile/** filter=lfs diff=lfs merge=lfs -text
+public/pics/logo/** filter=lfs diff=lfs merge=lfs -text
+
+# Background images
+public/pics/background.* filter=lfs diff=lfs merge=lfs -text
+
+# ===== OTHER LARGE FILES =====
+# Video files (if any future video content)
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.MP4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.MOV filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.AVI filter=lfs diff=lfs merge=lfs -text
+
+# Raw image files (if any)
+*.raw filter=lfs diff=lfs merge=lfs -text
+*.RAW filter=lfs diff=lfs merge=lfs -text
+*.cr2 filter=lfs diff=lfs merge=lfs -text
+*.CR2 filter=lfs diff=lfs merge=lfs -text
+*.nef filter=lfs diff=lfs merge=lfs -text
+*.NEF filter=lfs diff=lfs merge=lfs -text
+
+# ===== EXCLUSIONS - Keep these in regular Git =====
+# Small icons and favicons (keep in regular git)
+favicon.ico -filter
+*.ico -filter
+
+# SVG files (keep in regular git as they're text-based)
+*.svg -filter
+
+# Small CSS/JS assets (keep in regular git)
+*.css -filter
+*.js -filter
+*.html -filter
+*.json -filter
+*.md -filter
+
+# Configuration files (keep in regular git)
+package*.json -filter
+*.config.* -filter
+.gitignore -filter
+README.md -filter

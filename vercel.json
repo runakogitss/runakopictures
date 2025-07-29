@@ -1,0 +1,24 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "rewrites": [
+    {
+      "source": "/japantravel",
+      "destination": "/public/japantravel.html"
+    },
+    {
+      "source": "/kotalama", 
+      "destination": "/public/kotalama.html"
+    },
+    {
+      "source": "/schoollife",
+      "destination": "/public/schoollife.html"
+    },
+    {
+      "source": "/studiocology-gallery",
+      "destination": "/public/studiocology-gallery.html"
+    }
+  ]
+}
