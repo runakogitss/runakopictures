@@ -29,15 +29,7 @@ A modern, responsive photography portfolio website showcasing fine art photograp
 - **Lucide Icons** - Beautiful, consistent iconography
 - **Google Fonts** - Typography (Inter, Playfair Display, Crimson Text)
 
-## Contact
-
-- **Email**: runakopictures@gmail.com
-- **Phone**: +62 878-6736-5928
-- **WeChat**: runakoreynard
-- **Instagram**: [@runakopictures](https://www.instagram.com/runakopictures/)
-- **Location**: Semarang, Indonesia
-
-## Purpose
+## Purpose of this Portfolio
 
 This portfolio serves as a digital showcase of photographic work, connecting with potential clients, collaborators, and fellow photography enthusiasts. The website aims to:
 
