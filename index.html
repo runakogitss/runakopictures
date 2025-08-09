@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Runako Pictures - Fine Art Photography</title>
+  <meta name="description"
+    content="Museum-style fine art photography by Runako Pictures. Explore curated exhibitions featuring Japan, Semarang, collaborative works, and lifestyle photography with vintage-inspired aesthetics.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="pics/logo/runakopictures.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="pics/logo/runakopictures.png" alt="Runako Pictures Logo" class="logo-image">
+          </div>
+          <div class="logo-text">
+            <h1>Runako Pictures</h1>
+            <p>Fine Art Photography</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button onclick="scrollToSection('home')" class="nav-link active" data-section="home">Home</button>
+          <button onclick="scrollToSection('about')" class="nav-link" data-section="about">About</button>
+          <button onclick="scrollToSection('featured')" class="nav-link" data-section="featured">Collections</button>
+          <button onclick="scrollToSection('contact')" class="nav-link" data-section="contact">Contact</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <i data-lucide="menu" class="menu-icon"></i>
+          <i data-lucide="x" class="close-icon hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav hidden">
+      <div class="mobile-nav-content">
+        <button onclick="scrollToSection('home')" class="mobile-nav-link">Home</button>
+        <button onclick="scrollToSection('about')" class="mobile-nav-link">About</button>
+        <button onclick="scrollToSection('featured')" class="mobile-nav-link">Collections</button>
+        <button onclick="scrollToSection('contact')" class="mobile-nav-link">Contact</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+      <div class="hero-card">
+        <h1 class="hero-title">
+          Capturing Light,<br>
+          <span class="hero-title-accent">Preserving Soul</span>
+        </h1>
+        <p class="hero-description">
+          "Every picture has it is own story, so build them!"
+          <span class="hero-quote">— Reynard Runako</span>
+        </p>
+        <button onclick="scrollToSection('featured')" class="hero-btn">
+          View Collections
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-image-bg"></div>
+          <img src="pics/profile/profile.JPG" alt="Artist portrait" class="about-img">
+        </div>
+
+        <div class="about-content">
+          <h2 class="about-title">
+            The Artist's <span class="about-title-accent">Vision</span>
+          </h2>
+
+          <div class="about-text">
+            <p>Photography is my way of expressing art—freezing emotions, stories, and fleeting moments into something tangible. I thrive in the spontaneity of street photography and the thrill of travel, where every corner holds a new scene, a new feeling to capture.</p>
+
+            <p>Through my lens, I seek to preserve raw emotions and unspoken narratives, turning ordinary streets and distant landscapes into frames filled with life. My work is an invitation to see the world as I do: vibrant, emotional, and endlessly inspiring.</p>
+          </div>
+
+          <div class="about-quote">
+            <p>"Not light on paper, but a soul held tight,
+              A memory's whisper bathed in captured light." -Reynard Runako</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collections Section -->
+  <section id="featured" class="featured">
+    <div class="container">
+      <div class="featured-header">
+        <h2 class="featured-title">
+          Our <span class="featured-title-accent">Collections</span>
+        </h2>
+        <p class="featured-description">
+          Discover Selected Collections from Our Memories
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <!-- Studiocology Collabs Feature -->
+        <div class="feature-card" data-category="studiocology">
+          <div class="feature-image">
+            <img src="pics/studiocology/Studiocology.png" alt="Studiocology Collabs">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Studiocology Collabs</h3>
+            <p class="feature-year">2024</p>
+            <p class="feature-description">A visual journey that tells about story about our exclusively creative and
+              talented to meet collaborative children about school materials.</p>
+            <button class="feature-btn" onclick="window.location.href='studiocology.html'">VIEW DETAILS</button>
+          </div>
+        </div>
+
+        <!-- Trip to Japan Feature -->
+        <div class="feature-card" data-category="japan">
+          <div class="feature-image">
+            <img src="pics/japan trip/asakusa.JPG" alt="Trip to Japan">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Trip to Japan</h3>
+            <p class="feature-year">2025</p>
+            <p class="feature-description">A visual journey through Japan's light touches, cultural and traditional
+              spirit touches life, and more adventures with a story of grace, beauty, and pure reflection.</p>
+            <button class="feature-btn" onclick="window.location.href='japan.html'">VIEW DETAILS</button>
+          </div>
+        </div>
+
+        <!-- Lifestyle Moments Feature -->
+        <div class="feature-card" data-category="lifestyle">
+          <div class="feature-image">
+            <img src="pics/daily life/capgomeh.jpg" alt="Lifestyle Moments">>
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Daily Life</h3>
+            <p class="feature-year">2024</p>
+            <p class="feature-description">Capturing the authentic beauty of everyday life, where genuine emotions and
+              candid moments create timeless stories of human connection.</p>
+            <button class="feature-btn" onclick="window.location.href='daily.html'">VIEW DETAILS</button>
+          </div>
+        </div>
+
+        <!-- Semarang Heritage Feature -->
+        <div class="feature-card" data-category="semarang">
+          <div class="feature-image">
+            <img src="pics/kota lama/semarang.jpg" alt="Semarang Heritage">
+            <div class="feature-overlay"></div>
+          </div>
+          <div class="feature-content">
+            <h3 class="feature-title">Semarang Heritage</h3>
+            <p class="feature-year">2023</p>
+            <p class="feature-description">Exploring the rich colonial architecture and cultural heritage of Semarang,
+              where Dutch influences blend seamlessly with Javanese traditions.</p>
+            <button class="feature-btn" onclick="window.location.href='semarang.html'">VIEW DETAILS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-content">
+        <h2 class="contact-title">
+          Let's Create <span class="contact-title-accent">Together</span>
+        </h2>
+        <p class="contact-description">
+          Whether you're interested in commissioning a piece, collaborating on a project, or simply discussing the art
+          of photography, I'd love to hear from you.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <i data-lucide="mail"></i>
+            <h3>Email</h3>
+            <p>runakopictures@gmail.com</p>
+          </div>
+
+          <div class="contact-item">
+            <i data-lucide="phone"></i>
+            <h3>Phone</h3>
+            <p>+62 878-6736-5928</p>
+          </div>
+
+          <div class="contact-item">
+            <i data-lucide="map-pin"></i>
+            <h3>Location</h3>
+            <p>Semarang, Indonesia</p>
+          </div>
+
+          <div class="contact-item">
+            <i data-lucide="message-circle"></i>
+            <h3>WeChat</h3>
+            <p>runakoreynard</p>
+          </div>
+        </div>
+
+        <div class="contact-social">
+          <div class="contact-social-header">
+            <i data-lucide="instagram"></i>
+            <h3>Follow the Journey</h3>
+          </div>
+          <p>Stay connected with my latest work and behind-the-scenes moments on Instagram.</p>
+          <a href="https://www.instagram.com/runakopictures/" target="_blank" rel="noopener noreferrer"
+            class="contact-social-btn">@runakopictures</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+            <img src="pics/logo/runakopictures.png" alt="Runako Pictures Logo" class="footer-logo-image">
+          </div>
+          <div class="footer-logo-text">
+            <h3>Runako Pictures</h3>
+            <p>Fine Art Photography</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-quote">
+            "To photograph is to hold one's breath, when all faculties converge to capture fleeting reality."
+          </p>
+          <p class="footer-copyright">
+            © 2024 Runako Pictures. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden">
+    <button onclick="closeLightbox()" class="lightbox-close">
+      <i data-lucide="x"></i>
+    </button>
+
+    <button onclick="navigateLightbox('prev')" class="lightbox-nav lightbox-prev">
+      <i data-lucide="chevron-left"></i>
+    </button>
+
+    <button onclick="navigateLightbox('next')" class="lightbox-nav lightbox-next">
+      <i data-lucide="chevron-right"></i>
+    </button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-container">
+        <img id="lightbox-image" src="" alt="" class="lightbox-image">
+      </div>
+
+      <div class="lightbox-info">
+        <h3 id="lightbox-title"></h3>
+        <p id="lightbox-description"></p>
+        <div id="lightbox-counter" class="lightbox-counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

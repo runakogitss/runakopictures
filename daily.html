@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Life - Runako Pictures</title>
+  <meta name="description"
+    content="Capturing the authentic beauty of everyday life, where genuine emotions and candid moments create timeless stories of human connection.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="pics/logo/runakopictures.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="daily.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="pics/logo/runakopictures.png" alt="Runako Pictures Logo" class="logo-image">
+          </div>
+          <div class="logo-text">
+            <h1>Runako Pictures</h1>
+            <p>Fine Art Photography</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button onclick="window.location.href='index.html'" class="nav-link">Home</button>
+          <button onclick="window.location.href='japan.html'" class="nav-link">Japan</button>
+          <button onclick="window.location.href='semarang.html'" class="nav-link">Semarang Heritage</button>
+          <button onclick="window.location.href='daily.html'" class="nav-link active">Daily Life</button>
+          <button onclick="window.location.href='studiocology.html'" class="nav-link">Studiocology</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <i data-lucide="menu" class="menu-icon"></i>
+          <i data-lucide="x" class="close-icon hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav hidden">
+      <div class="mobile-nav-content">
+        <button onclick="window.location.href='index.html'" class="mobile-nav-link">Home</button>
+        <button onclick="window.location.href='japan.html'" class="mobile-nav-link">Japan</button>
+        <button onclick="window.location.href='semarang.html'" class="mobile-nav-link">Semarang Heritage</button>
+        <button onclick="window.location.href='daily.html'" class="mobile-nav-link active">Daily Life</button>
+        <button onclick="window.location.href='studiocology.html'" class="mobile-nav-link">Studiocology</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="daily-hero">
+    <div class="daily-hero-overlay"></div>
+    <div class="daily-hero-bg"></div>
+
+    <div class="daily-hero-content">
+      <div class="daily-hero-card">
+        <h1 class="daily-hero-title">
+          Daily Life: <span class="daily-hero-title-accent">Moments of Authenticity</span>
+        </h1>
+        <p class="daily-hero-description">
+          Capturing the authentic beauty of everyday life, where genuine emotions and candid moments create timeless stories of human connection and shared experiences.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="daily-gallery">
+    <div class="container">
+      <div class="daily-gallery-header">
+        <h2 class="daily-gallery-title">
+          Life <span class="daily-gallery-title-accent">Unfiltered</span>
+        </h2>
+        <p class="daily-gallery-description">
+          A collection of candid moments that celebrate the beauty found in ordinary days and extraordinary friendships.
+        </p>
+      </div>
+
+      <div class="daily-grid">
+        <!-- Row 1: Featured images -->
+        <div class="daily-grid-item daily-grid-large" onclick="openLightbox('DSC05761')">
+          <img src="pics/daily life/new pics/DSC05761.JPG" alt="Daily Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Beautiful Lights</h3>
+              <p>The view..</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-large" onclick="openLightbox('DSC03781')">
+          <img src="pics/daily life/new pics/DSC03781.JPG" alt="Life Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Cool Ones may be Rare.</h3>
+              <p>Finding extraordinary things on a open world.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Mixed sizes -->
+        <div class="daily-grid-item daily-grid-wide" onclick="openLightbox('DSC03824')">
+          <img src="pics/daily life/new pics/DSC03824.JPG" alt="Group Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Pocari Sweet</h3>
+              <p>The most reliable drink on a hot summer.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('byruchan')">
+          <img src="pics/daily life/new pics/byruchan.JPG" alt="Portrait" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Cool Hearted Portraits</h3>
+              <p>You better don't mess with me.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('kevingoat')">
+          <img src="pics/daily life/new pics/kevingoat.JPG" alt="Friendship" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>The Karangturi Carnaval Walk.</h3>
+              <p>Can't believe Mr Aris Susilo saw me >_<</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Various sizes -->
+        <div class="daily-grid-item daily-grid-medium" onclick="openLightbox('DSC03864')">
+          <img src="pics/daily life/new pics/DSC03864.JPG" alt="Life Scenes" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Girls Squad</h3>
+              <p>You better don't mess with them.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('best-buddy-raph')">
+          <img src="pics/daily life/new pics/best buddy raph.JPG" alt="Best Friends" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Chill Guy Raph</h3>
+              <p>The chillest friend of the year.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('waifu')">
+          <img src="pics/daily life/new pics/waifu.JPG" alt="Special Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>That Dreamy Feeling</h3>
+              <p>Sometimes people may fall for her.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Tall and medium -->
+        <div class="daily-grid-item daily-grid-tall" onclick="openLightbox('DSC02384')">
+          <img src="pics/daily life/new pics/DSC02384.JPG" alt="Portrait Study" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Sepia Styled Portait</h3>
+              <p>"I Like This One."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-medium" onclick="openLightbox('timnas')">
+          <img src="pics/daily life/new pics/timnas.JPG" alt="Team Spirit" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Byru the Ace of Soccer.</h3>
+              <p>He is your wild card.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('dragon')">
+          <img src="pics/daily life/new pics/dragon.jpg" alt="Creative Expression" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Dance of The Dragon!</h3>
+              <p>Feel the Fury of the Dragon!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('dragon-two')">
+          <img src="pics/daily life/new pics/dragon two.jpg" alt="Artistic Vision" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Dragon's Dance</h3>
+              <p>The Fury of the Dragon!</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 5: Three equal images -->
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('bryan-suka-lanang')">
+          <img src="pics/daily life/new pics/Bryan Suka Lanang ini.jpg" alt="Character Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Three Cool Men</h3>
+              <p>When macho and cool are fused together.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('nice-try')">
+          <img src="pics/daily life/new pics/nice try.jpg" alt="Playful Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Is that a Genshin Character?</h3>
+              <p>What do I miss?</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-small" onclick="openLightbox('ambatunat')">
+          <img src="pics/daily life/new pics/AMBATUNAT.png" alt="Fun Moments" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Soccer at Pre-Independence Day</h3>
+              <p>Sometimes soccer is fun.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Final row -->
+        <div class="daily-grid-item daily-grid-wide" onclick="openLightbox('edited-dsc')">
+          <img src="pics/daily life/new pics/Edited DSC BBeuhhhhh.JPG" alt="Edited Memories" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Last Moment of High School</h3>
+              <p>One last moment I can't forget.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="daily-grid-item daily-grid-medium" onclick="openLightbox('DSC05120')">
+          <img src="pics/daily life/new pics/20250214-DSC05120.JPG" alt="Recent Memories" loading="lazy">
+          <div class="daily-grid-overlay">
+            <div class="daily-grid-content">
+              <h3>Cosplayer Spotted.</h3>
+              <p>I just caught a March 7th Cosplayer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+            <img src="pics/logo/runakopictures.png" alt="Runako Pictures Logo" class="footer-logo-image">
+          </div>
+          <div class="footer-logo-text">
+            <h3>Runako Pictures</h3>
+            <p>Fine Art Photography</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-quote">
+            "To photograph is to hold one's breath, when all faculties converge to capture fleeting reality."
+          </p>
+          <p class="footer-copyright">
+            © 2024 Runako Pictures. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden">
+    <button onclick="closeLightbox()" class="lightbox-close">
+      <i data-lucide="x"></i>
+    </button>
+
+    <button onclick="navigateLightbox('prev')" class="lightbox-nav lightbox-prev">
+      <i data-lucide="chevron-left"></i>
+    </button>
+
+    <button onclick="navigateLightbox('next')" class="lightbox-nav lightbox-next">
+      <i data-lucide="chevron-right"></i>
+    </button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-container" id="lightbox-image-container">
+        <img id="lightbox-image" src="" alt="" class="lightbox-image">
+        <div class="mobile-swipe-indicator">
+          Swipe left or right to navigate
+        </div>
+      </div>
+
+      <div class="lightbox-info" id="lightbox-info-panel">
+        <div class="mobile-slide-handle"></div>
+        <div class="reading-progress">
+          <div class="reading-progress-bar" id="reading-progress-bar"></div>
+        </div>
+        <div class="reading-time" id="reading-time"></div>
+        <h3 id="lightbox-title"></h3>
+        <div class="description-content">
+          <p id="lightbox-description"></p>
+        </div>
+        <div id="lightbox-counter" class="lightbox-counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="daily.js"></script>
+</body>
+
+</html>

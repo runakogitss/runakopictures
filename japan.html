@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Trip - Runako Pictures</title>
+  <meta name="description"
+    content="An intimate exploration of Japan's ephemeral beauty, where light and shadow dance together to create moments of pure artistic expression.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="pics/logo/runakopictures.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="japan.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <img src="pics/logo/runakopictures.png" alt="Runako Pictures Logo" class="logo-image">
+          </div>
+          <div class="logo-text">
+            <h1>Runako Pictures</h1>
+            <p>Fine Art Photography</p>
+          </div>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="nav-links">
+          <button onclick="window.location.href='index.html'" class="nav-link">Home</button>
+          <button onclick="window.location.href='japan.html'" class="nav-link active">Japan</button>
+          <button onclick="window.location.href='semarang.html'" class="nav-link">Semarang Heritage</button>
+          <button onclick="window.location.href='daily.html'" class="nav-link">Daily Life</button>
+          <button onclick="window.location.href='studiocology.html'" class="nav-link">Studiocology</button>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <i data-lucide="menu" class="menu-icon"></i>
+          <i data-lucide="x" class="close-icon hidden"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav hidden">
+      <div class="mobile-nav-content">
+        <button onclick="window.location.href='index.html'" class="mobile-nav-link">Home</button>
+        <button onclick="window.location.href='japan.html'" class="mobile-nav-link active">Japan</button>
+        <button onclick="window.location.href='semarang.html'" class="mobile-nav-link">Semarang Heritage</button>
+        <button onclick="window.location.href='daily.html'" class="mobile-nav-link">Lifestyle</button>
+        <button onclick="window.location.href='studiocology.html'" class="mobile-nav-link">Studiocology</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="japan-hero">
+    <div class="japan-hero-overlay"></div>
+    <div class="japan-hero-bg"></div>
+
+    <div class="japan-hero-content">
+      <div class="japan-hero-card">
+        <h1 class="japan-hero-title">
+          Japan: <span class="japan-hero-title-accent">Whispers of Tradition & Modernity</span>
+        </h1>
+        <p class="japan-hero-description">
+          An intimate exploration of Japan's ephemeral beauty, where light and shadow dance together to create moments
+          of pure artistic expression.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="japan-gallery">
+    <div class="container">
+      <div class="japan-gallery-header">
+        <h2 class="japan-gallery-title">
+          Captured <span class="japan-gallery-title-accent">Moments</span>
+        </h2>
+        <p class="japan-gallery-description">
+          A visual journey through the Land of the Rising Sun, where ancient wisdom meets contemporary innovation.
+        </p>
+      </div>
+
+      <div class="japan-grid">
+        <!-- Image 1: fujisan -->
+        <div class="japan-grid-item japan-grid-large" onclick="openLightbox('fujisan')">
+          <img src="pics/japan trip/japan trip watermark/fujisan.JPG" alt="Mount Fuji" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Mount Fuji Majesty</h3>
+              <p>栄光に満ちた日本の神聖な山。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 2: DSC05954 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC05954')">
+          <img src="pics/japan trip/japan trip watermark/DSC05954.JPG" alt="Urban Scene" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Streets of Namba</h3>
+              <p>ここの自動販売機の中には何が入っているのでしょうか？</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 3: DSC05993 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC05993')">
+          <img src="pics/japan trip/japan trip watermark/DSC05993.JPG" alt="Traditional Architecture" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Den Den Town Nipponbashi</h3>
+              <p>アニメとマンガが大好きです！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 4: DSC06013 -->
+        <div class="japan-grid-item japan-grid-tall" onclick="openLightbox('DSC06013')">
+          <img src="pics/japan trip/japan trip watermark/DSC06013.JPG" alt="Osaka Crab King" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Osaka Crab King!</h3>
+              <p>特製カニ料理。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 5: DSC06015 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06015')">
+          <img src="pics/japan trip/japan trip watermark/DSC06015.JPG" alt="Cultural Moments" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Michellin Takoyaki Signs</h3>
+              <p>これは有望に思えますね。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 6: DSC06020 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06020')">
+          <img src="pics/japan trip/japan trip watermark/DSC06020.JPG" alt="City Life" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>A Big Takoyaki Sign</h3>
+              <p>わあ！大きなたこ焼き！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 7: DSC06025 -->
+        <div class="japan-grid-item japan-grid-medium" onclick="openLightbox('DSC06025')">
+          <img src="pics/japan trip/japan trip watermark/DSC06025.JPG" alt="Architectural Beauty" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Dotonbori Signs</h3>
+              <p>なんと大きくて面白い看板でしょう！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 8: DSC06064 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06064')">
+          <img src="pics/japan trip/japan trip watermark/DSC06064.JPG" alt="Street Photography" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Wonder Cruise Party!</h3>
+              <p>なんと面白い船でしょう！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 9: DSC06066 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06066')">
+          <img src="pics/japan trip/japan trip watermark/DSC06066.JPG" alt="Urban Landscape" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Super Dry Asahi Signs</h3>
+              <p>アサヒとは何ですか？</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 10: DSC06075 -->
+        <div class="japan-grid-item japan-grid-wide" onclick="openLightbox('DSC06075')">
+          <img src="pics/japan trip/japan trip watermark/DSC06075.JPG" alt="Cultural Heritage" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Osaka's Shinsaibashi Suji</h3>
+              <p>ブランドが一堂に集まる場所。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 11: DSC06100 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06100')">
+          <img src="pics/japan trip/japan trip watermark/DSC06100.JPG" alt="Japanese Aesthetics" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Walking to the Castle</h3>
+              <p>面白いお城ですね?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 12: DSC06109 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06109')">
+          <img src="pics/japan trip/japan trip watermark/DSC06109.JPG" alt="Temple Life" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Temple Serenity</h3>
+              <p>スピリチュアルな雰囲気。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 13: DSC06115 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06115')">
+          <img src="pics/japan trip/japan trip watermark/DSC06115.JPG" alt="Traditional Crafts" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Osaka Castle</h3>
+              <p>大阪城は素晴らしいですね！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 14: DSC06153 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06153')">
+          <img src="pics/japan trip/japan trip watermark/DSC06153.JPG" alt="Nature and Culture" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Up To Umeda Sky Building</h3>
+              <p>梅田スカイビルへ行こう！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 15: DSC06215 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06215')">
+          <img src="pics/japan trip/japan trip watermark/DSC06215.JPG" alt="Cultural Expressions" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Spiderman in Osaka</h3>
+              <p>あなたのフレンドリーな近所。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 16: DSC06218 -->
+        <div class="japan-grid-item japan-grid-medium" onclick="openLightbox('DSC06218')">
+          <img src="pics/japan trip/japan trip watermark/DSC06218.JPG" alt="Modern Japan" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>The Glico Man Sign</h3>
+              <p>道頓堀の伝説のランドマーク。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 17: DSC06303 -->
+        <div class="japan-grid-item japan-grid-medium" onclick="openLightbox('DSC06303')">
+          <img src="pics/japan trip/japan trip watermark/DSC06303.JPG" alt="Architectural Details" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Kiyomizu Dera's Iconic Pagoda</h3>
+              <p>清水寺の塔。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 18: DSC06710 -->
+        <div class="japan-grid-item japan-grid-large" onclick="openLightbox('DSC06710')">
+          <img src="pics/japan trip/japan trip watermark/DSC06710.JPG" alt="Evening Atmosphere" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Nights of Shinjuku</h3>
+              <p>美しい新宿の夜。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 19: DSC06740 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06740')">
+          <img src="pics/japan trip/japan trip watermark/DSC06740.JPG" alt="Urban Exploration" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Japan Night's Railway</h3>
+              <p>東京の夜の時間。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 20: DSC06762 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06762')">
+          <img src="pics/japan trip/japan trip watermark/DSC06762.JPG" alt="Traditional Elements" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Iconic Kaminarimon</h3>
+              <p>大きな赤いランタン！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 21: DSC06769 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06769')">
+          <img src="pics/japan trip/japan trip watermark/DSC06769.JPG" alt="Scenic Beauty" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Nakamise-dori Shopping Street</h3>
+              <p>賑やかな商店街。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 22: DSC06778 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06778')">
+          <img src="pics/japan trip/japan trip watermark/DSC06778.JPG" alt="Cultural Landscape" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Entrance of Sensoji Temple</h3>
+              <p>浅草寺は素晴らしかったです！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 23: DSC06791 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06791')">
+          <img src="pics/japan trip/japan trip watermark/DSC06791.JPG" alt="Artistic Moments" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Statue of Kannon</h3>
+              <p>浅草のかっこいい像。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 24: DSC06792-2 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06792-2')">
+          <img src="pics/japan trip/japan trip watermark/DSC06792-2.JPG" alt="Photographic Art" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Sensoji's Pagoda</h3>
+              <p>なんと高い塔でしょう！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 25: DSC06812 -->
+        <div class="japan-grid-item japan-grid-wide" onclick="openLightbox('DSC06812')">
+          <img src="pics/japan trip/japan trip watermark/DSC06812.JPG" alt="Journey Memories" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Asakusa Shopping Street</h3>
+              <p>浅草の賑やかな場所。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 26: DSC06822 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06822')">
+          <img src="pics/japan trip/japan trip watermark/DSC06822.JPG" alt="Cultural Immersion" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Journey to Skytree</h3>
+              <p>スカイツリーへ向かいます！</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 27: DSC06886 -->
+        <div class="japan-grid-item japan-grid-medium" onclick="openLightbox('DSC06886')">
+          <img src="pics/japan trip/japan trip watermark/DSC06886.JPG" alt="Final Impressions" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Asakusa's Starry Night</h3>
+              <p>忘れられない夜。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 28: DSC06330 -->
+        <div class="japan-grid-item japan-grid-medium" onclick="openLightbox('DSC06330')">
+          <img src="pics/japan trip/japan trip watermark/DSC06330.JPG" alt="Japanese Architecture" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Architectural Wonder</h3>
+              <p>モダンなフュージョンデザイン。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image 29: DSC06318 -->
+        <div class="japan-grid-item japan-grid-small" onclick="openLightbox('DSC06318')">
+          <img src="pics/japan trip/japan trip watermark/DSC06318.JPG" alt="Cultural Scene" loading="lazy">
+          <div class="japan-grid-overlay">
+            <div class="japan-grid-content">
+              <h3>Cultural Moments</h3>
+              <p>清水寺での文化的なひととき。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">
+            <img src="pics/logo/runakopictures.png" alt="Runako Pictures Logo" class="footer-logo-image">
+          </div>
+          <div class="footer-logo-text">
+            <h3>Runako Pictures</h3>
+            <p>Fine Art Photography</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-quote">
+            "To photograph is to hold one's breath, when all faculties converge to capture fleeting reality."
+          </p>
+          <p class="footer-copyright">
+            © 2024 Runako Pictures. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox hidden">
+    <button onclick="closeLightbox()" class="lightbox-close">
+      <i data-lucide="x"></i>
+    </button>
+
+    <button onclick="navigateLightbox('prev')" class="lightbox-nav lightbox-prev">
+      <i data-lucide="chevron-left"></i>
+    </button>
+
+    <button onclick="navigateLightbox('next')" class="lightbox-nav lightbox-next">
+      <i data-lucide="chevron-right"></i>
+    </button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-container" id="lightbox-image-container">
+        <img id="lightbox-image" src="" alt="" class="lightbox-image">
+        <div class="mobile-swipe-indicator">
+          Swipe left or right to navigate
+        </div>
+
+      </div>
+
+      <div class="lightbox-info" id="lightbox-info-panel">
+        <div class="mobile-slide-handle"></div>
+        <div class="reading-progress">
+          <div class="reading-progress-bar" id="reading-progress-bar"></div>
+        </div>
+        <div class="reading-time" id="reading-time"></div>
+        <h3 id="lightbox-title"></h3>
+        <div class="description-content">
+          <p id="lightbox-description"></p>
+        </div>
+        <div id="lightbox-counter" class="lightbox-counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom JavaScript -->
+  <script src="japan.js"></script>
+</body>
+
+</html>

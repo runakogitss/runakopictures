@@ -1,0 +1,29 @@
+{
+  "name": "runako-pictures-static",
+  "version": "1.0.0",
+  "description": "Static HTML website for Runako Pictures - Fine Art Photography",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "serve": "python -m http.server 8000",
+    "open": "start index.html"
+  },
+  "keywords": [
+    "photography",
+    "portfolio",
+    "static-website",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Runako Pictures",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

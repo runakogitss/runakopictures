@@ -1,0 +1,983 @@
+/* Japan Gallery Specific Styles */
+
+/* Japan Hero Section */
+.japan-hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.japan-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(139, 69, 19, 0.3) 0%,
+            rgba(139, 69, 19, 0.1) 30%,
+            rgba(0, 0, 0, 0.2) 70%,
+            transparent 100%);
+    z-index: 10;
+}
+
+.japan-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-color: #8B4513;
+    background-image: url('pics/japan trip/asakusa.JPG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: sepia(15%) saturate(85%) brightness(80%) contrast(1.1);
+    transition: all 0.8s ease;
+    animation: slowZoom 20s ease-in-out infinite alternate;
+}
+
+.japan-hero-content {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.japan-hero-card {
+    background: rgba(248, 245, 242, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUpFade 1s ease-out 0.3s forwards;
+    transition: all 0.4s ease;
+}
+
+.japan-hero-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.35);
+    border-color: rgba(210, 105, 30, 0.5);
+}
+
+.japan-hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: #8B4513;
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.japan-hero-title-accent {
+    color: #D2691E;
+}
+
+.japan-hero-description {
+    color: #A0522D;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+/* Japan Gallery Section */
+.japan-gallery {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #F8F5F2, #EDECE8);
+}
+
+.japan-gallery-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.japan-gallery-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: #8B4513;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+.japan-gallery-title-accent {
+    color: #D2691E;
+}
+
+.japan-gallery-description {
+    color: #A0522D;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+/* Japan Grid Layout - Natural Aspect Ratio Masonry */
+.japan-grid {
+    columns: 4;
+    column-gap: 0.75rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    column-fill: balance;
+    orphans: 1;
+    widows: 1;
+}
+
+/* Grid Item Sizes - Natural Flow */
+.japan-grid-featured {
+    column-span: all;
+    margin-bottom: 0.75rem;
+    max-height: 350px;
+}
+
+.japan-grid-large {
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.japan-grid-medium {
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.japan-grid-small {
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.japan-grid-wide {
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+.japan-grid-tall {
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+    width: 100%;
+}
+
+/* Grid Items */
+.japan-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px -2px rgba(139, 69, 19, 0.15);
+    border: 1px solid rgba(210, 105, 30, 0.1);
+    background: #F8F5F2;
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 0.75rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: staggerFadeIn 0.8s ease-out forwards;
+}
+
+.japan-grid-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.japan-grid-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.japan-grid-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.japan-grid-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.japan-grid-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.japan-grid-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.japan-grid-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.japan-grid-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+.japan-grid-item:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+.japan-grid-item:nth-child(10) {
+    animation-delay: 1.0s;
+}
+
+.japan-grid-item:nth-child(n+11) {
+    animation-delay: 1.1s;
+}
+
+.japan-grid-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px -8px rgba(139, 69, 19, 0.3);
+    border-color: rgba(210, 105, 30, 0.4);
+    z-index: 10;
+}
+
+.japan-grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: sepia(8%) saturate(90%) brightness(96%) contrast(1.02);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0.5rem;
+    display: block;
+    transform: scale(1);
+    min-height: 200px;
+    background: #F8F5F2;
+}
+
+.japan-grid-item:hover img {
+    filter: sepia(12%) saturate(95%) brightness(98%) contrast(1.05);
+    transform: scale(1.05);
+}
+
+/* Featured image special styling */
+.japan-grid-featured {
+    background: #F8F5F2;
+}
+
+.japan-grid-featured img {
+    object-fit: contain;
+    background: #F8F5F2;
+    max-height: 350px;
+}
+
+.japan-grid-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top,
+            rgba(139, 69, 19, 0.9) 0%,
+            rgba(139, 69, 19, 0.6) 50%,
+            transparent 100%);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    border-radius: 0 0 0.75rem 0.75rem;
+}
+
+.japan-grid-item:hover .japan-grid-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.japan-grid-content {
+    width: 100%;
+}
+
+.japan-grid-content h3 {
+    font-family: 'Crimson Text', serif;
+    color: #F8F5F2;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s;
+}
+
+.japan-grid-content p {
+    color: rgba(248, 245, 242, 0.9);
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.2s;
+}
+
+.japan-grid-item:hover .japan-grid-content h3,
+.japan-grid-item:hover .japan-grid-content p {
+    transform: translateY(0);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    backdrop-filter: blur(8px);
+}
+
+.lightbox:not(.hidden) {
+    opacity: 1;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(248, 245, 242, 0.1);
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-close:hover {
+    color: #D2691E;
+    background: rgba(248, 245, 242, 0.2);
+    border-color: rgba(218, 165, 32, 0.6);
+    transform: scale(1.1);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(248, 245, 242, 0.1);
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-nav:hover {
+    color: #D2691E;
+    background: rgba(248, 245, 242, 0.2);
+    border-color: rgba(218, 165, 32, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev {
+    left: 1rem;
+}
+
+.lightbox-next {
+    right: 1rem;
+}
+
+.lightbox-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lightbox:not(.hidden) .lightbox-content {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.lightbox-image-container {
+    flex: 1;
+    max-width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.lightbox-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.lightbox-image:hover {
+    box-shadow: 0 35px 70px -12px rgba(0, 0, 0, 0.7);
+}
+
+/* Slide transition classes */
+.lightbox-image.slide-out-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.lightbox-image.slide-out-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.lightbox-image.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.lightbox-image.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.lightbox-image.slide-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.lightbox-info {
+    width: 22rem;
+    max-width: 25vw;
+    background: #F8F5F2;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 25px -5px rgba(139, 69, 19, 0.2);
+    border: 1px solid rgba(210, 105, 30, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    align-self: center;
+    flex-shrink: 0;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lightbox-info:hover {
+    box-shadow: 0 15px 35px -5px rgba(139, 69, 19, 0.3);
+    border-color: rgba(210, 105, 30, 0.4);
+}
+
+/* Info slide transitions */
+.lightbox-info.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.lightbox-info.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lightbox-info h3 {
+    font-family: 'Crimson Text', serif;
+    color: #8B4513;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.lightbox-info p {
+    color: #A0522D;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.lightbox-counter {
+    color: rgba(160, 82, 45, 0.7);
+    font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .japan-grid {
+        columns: 3;
+        column-gap: 0.75rem;
+        max-width: 900px;
+    }
+
+    .japan-grid-featured {
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .japan-hero-title {
+        font-size: 2rem;
+    }
+
+    .japan-grid {
+        columns: 2;
+        column-gap: 0.5rem;
+        padding: 0.75rem;
+        max-width: 600px;
+    }
+
+    .japan-grid-featured {
+        max-height: 250px;
+    }
+
+    .japan-grid-item {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Mobile-optimized lightbox */
+    .lightbox {
+        padding: 0;
+    }
+
+    .lightbox-content {
+        flex-direction: column;
+        gap: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        width: 100%;
+        height: 100%;
+    }
+
+    .lightbox-image-container {
+        max-width: 100vw;
+        height: 60vh;
+        background: #000;
+        position: relative;
+    }
+
+    .lightbox-image {
+        max-height: 60vh;
+        width: 100%;
+        object-fit: contain;
+        border-radius: 0;
+    }
+
+    .lightbox-info {
+        width: 100%;
+        max-width: 100vw;
+        padding: 1.5rem;
+        border-radius: 1rem 1rem 0 0;
+        margin-top: -1rem;
+        background: #F8F5F2;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        box-shadow: 0 -10px 25px -5px rgba(139, 69, 19, 0.2);
+        position: relative;
+        z-index: 20;
+        overflow-y: auto;
+    }
+
+    .lightbox-info h3 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .lightbox-info p {
+        text-align: left;
+        line-height: 1.7;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .lightbox-counter {
+        text-align: center;
+        margin-top: auto;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(210, 105, 30, 0.2);
+        font-size: 0.9rem;
+    }
+
+    /* Mobile navigation buttons */
+    .lightbox-nav {
+        position: absolute;
+        top: 30vh;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        width: 48px;
+        height: 48px;
+        z-index: 30;
+    }
+
+    .lightbox-prev {
+        left: 1rem;
+    }
+
+    .lightbox-next {
+        right: 1rem;
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(0, 0, 0, 0.6);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        width: 40px;
+        height: 40px;
+        z-index: 30;
+    }
+
+    /* Mobile swipe indicator */
+    .mobile-swipe-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 2rem;
+        font-size: 0.85rem;
+        z-index: 25;
+        animation: fadeInOut 3s ease-in-out infinite;
+        backdrop-filter: blur(4px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+    }
+
+
+
+    /* Mobile touch improvements */
+    .lightbox-image-container {
+        touch-action: pan-x;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    /* Better mobile info panel */
+    .lightbox-info {
+        min-height: 40vh;
+        max-height: 40vh;
+    }
+
+    .lightbox-info h3 {
+        position: sticky;
+        top: 0;
+        background: #F8F5F2;
+        padding-bottom: 0.5rem;
+        z-index: 10;
+    }
+
+    /* Mobile navigation improvements */
+    .lightbox-nav:active,
+    .lightbox-close:active {
+        transform: scale(0.95);
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+@media (max-width: 480px) {
+    .japan-hero-card {
+        padding: 1.5rem;
+    }
+
+    .japan-hero-title {
+        font-size: 1.75rem;
+    }
+
+    .japan-grid {
+        columns: 1;
+        column-gap: 0;
+        padding: 0.5rem;
+        max-width: 400px;
+    }
+
+    .japan-grid-featured {
+        max-height: 200px;
+    }
+
+    .japan-grid-item {
+        margin-bottom: 0.5rem;
+    }
+
+    .japan-grid-content h3 {
+        font-size: 1rem;
+    }
+
+    .japan-grid-content p {
+        font-size: 0.75rem;
+    }
+
+    /* Extra small mobile adjustments */
+    .lightbox-info {
+        padding: 1rem;
+    }
+
+    .lightbox-info h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .lightbox-info p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .lightbox-nav {
+        width: 44px;
+        height: 44px;
+    }
+
+    .lightbox-close {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes staggerFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slowZoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Smooth page transitions */
+body {
+    transition: opacity 0.3s ease;
+}
+
+/* Loading state for images */
+.japan-grid-item img {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.japan-grid-item img.loaded {
+    opacity: 1;
+}
+
+/* Enhanced focus states for accessibility */
+.japan-grid-item:focus,
+.lightbox-close:focus,
+.lightbox-nav:focus {
+    outline: 2px solid #D2691E;
+    outline-offset: 2px;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Japan page navigation enhancements */
+.nav-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    background: none;
+    border: none;
+    color: #8B4513;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-link:hover {
+    background: rgba(210, 105, 30, 0.1);
+    color: #D2691E;
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    background: rgba(210, 105, 30, 0.2);
+    color: #B8860B;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(210, 105, 30, 0.2);
+}
+
+/* Mobile navigation adjustments */
+.mobile-nav-link {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #8B4513;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.mobile-nav-link:hover {
+    background: rgba(210, 105, 30, 0.1);
+    color: #D2691E;
+}
+
+.mobile-nav-link.active {
+    background: rgba(218, 165, 32, 0.2);
+    color: #B8860B;
+    font-weight: 600;
+}
+
+.mobile-nav-link:last-child {
+    border-bottom: none;
+}
+
+/* Responsive navigation for smaller screens */
+@media (max-width: 1024px) {
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
+* Japan page specific footer styling */
+.footer {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+    color: #F4E4BC;
+    padding: 3rem 0;
+    border-top: 3px solid rgba(210, 105, 30, 0.4);
+}
+
+.footer-logo-text h3 {
+    color: #F4E4BC;
+    font-weight: 600;
+}
+
+.footer-logo-text p {
+    color: rgba(244, 228, 188, 0.8);
+    font-size: 0.875rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(210, 105, 30, 0.4);
+    padding-top: 1.5rem;
+}
+
+.footer-quote {
+    color: rgba(244, 228, 188, 0.9);
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-copyright {
+    color: rgba(244, 228, 188, 0.7);
+    font-size: 0.875rem;
+}
+
+/* Enhanced footer styling for Japan page */
+.footer-content {
+    position: relative;
+}
+
+.footer-logo {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.footer-logo-image {
+    filter: brightness(1.2) sepia(20%) saturate(120%);
+    transition: filter 0.3s ease;
+}
+
+.footer-logo:hover .footer-logo-image {
+    filter: brightness(1.4) sepia(30%) saturate(140%);
+}
